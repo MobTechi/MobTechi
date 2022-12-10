@@ -1,0 +1,159 @@
+@use 'node_modules/@open-template-hub/card/styles/card/card';
+@use '../../../../styles/util/util';
+
+.product-page-content {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  width: 100%;
+}
+
+.counter-wrapper p {
+  color: var(--lighter-contrast);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.intro {
+  @include util.flex-layout-row;
+
+  align-items: center;
+  justify-content: space-evenly;
+
+  text-align: center;
+  width: 94%;
+
+  & .left {
+    & .header {
+      @include util.default-border-radius;
+
+      padding: 20px;
+
+      background-color: var(--darker-contrast);
+
+      z-index: 2;
+    }
+
+    & .body {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+      @include util.default-shadow;
+
+      @include util.default-border-radius-product-line;
+
+      margin-top: -10px;
+      justify-content: space-between;
+      position: relative;
+      background-color: var(--shadow-lighter);
+
+      .app-icon {
+        width: 35%;
+        height: 35%;
+        margin-bottom: 15%;
+      }
+
+      & p {
+        font-size: 20px;
+      }
+
+      & .button-wrapper {
+        @include util.flex-layout-column;
+        @include util.flex-center-center;
+
+        box-sizing: border-box;
+
+        width: 100%;
+
+        &>* {
+          width: 100%;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+.screenshots-wrapper {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  box-sizing: border-box;
+
+  width: 90%;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  padding-bottom: 100px;
+
+  text-align: center;
+
+  .product-card {
+    & .header {
+      text-align: left;
+      font-size: 20px;
+    }
+
+    & .body {
+      justify-content: flex-start;
+      background-color: transparent;
+      box-shadow: none;
+
+      & app-screenshot-swiper {
+        margin-top: 50px;
+      }
+
+      height: 350px;
+      width: 84vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .intro {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    font-size: 22px;
+    padding-top: 50px;
+
+    justify-content: flex-start;
+
+    & .body {
+      padding: 50px 30px 30px;
+
+      & .button-wrapper {
+        padding: 50px 10px 0;
+      }
+    }
+
+    & .left {
+      border-bottom-right-radius: 125px;
+      padding-bottom: 50px;
+      width: 94%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .intro {
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+    flex-direction: row;
+
+    & .body {
+      padding: 60px 60px 40px;
+      min-height: 280px;
+
+      & .button-wrapper {
+        padding: 50px 50px 0;
+        max-width: 450px;
+      }
+    }
+
+    & .left {
+      width: 45%;
+    }
+  }
+}
