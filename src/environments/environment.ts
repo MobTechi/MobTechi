@@ -1,6 +1,5 @@
 export const environment = {
   production: false,
-  version: 1.1,
   website: 'https://mobtechi.com',
   email: 'support@mobtechi.com',
   social: [

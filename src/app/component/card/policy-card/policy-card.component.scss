@@ -13,6 +13,10 @@
     & .body {
       padding: 30px 20px 20px;
       font-size: 16px;
+
+      a {
+        color: var(--theme-color);
+      }
     }
   }
 
@@ -28,7 +32,7 @@
     }
   }
 
-  .policy-content h5, .policy-content p {
+  .policy-content h5, .policy-content p, .policy-content div {
     padding-bottom: 20px;
   }
 }
