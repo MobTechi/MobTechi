@@ -1,0 +1,10 @@
+<oth-card [bodyTemplate]="bodyTemplate" class="policy-card">
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <ng-container *ngTemplateOutlet="policyBody">
+        <!-- Body of the card -->
+      </ng-container>
+    </div>
+  </ng-template>
+</oth-card>

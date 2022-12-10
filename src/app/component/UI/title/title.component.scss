@@ -1,0 +1,72 @@
+@use '../../../../styles/util/util';
+
+.title {
+  &.no-padding {
+    padding-top: 0;
+  }
+
+  & .body {
+    @include util.flex-layout-column;
+
+    position: relative;
+    text-align: center;
+    align-items: center;
+    padding: 20px 0;
+
+    & .contents {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .title {
+    & .body {
+      & .contents {
+        @include util.flex-layout-column;
+
+        & > * {
+          @include util.flex-layout-column;
+          @include util.card-width-sm;
+          margin-bottom: 20px;
+        }
+
+        & img {
+          min-width: initial;
+          width: initial;
+          max-width: initial;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+
+    & .body {
+
+      & .contents {
+        flex-direction: column;
+        max-width: 800px;
+
+        & > * {
+          flex-direction: column;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &.no-padding {
+      & .body {
+        padding-bottom: 0;
+
+        & .contents {
+          & > * {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

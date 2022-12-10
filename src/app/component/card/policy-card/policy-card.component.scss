@@ -1,0 +1,34 @@
+@use 'node_modules/@open-template-hub/card/styles/card/card';
+
+@use '../../../../styles/util/util';
+
+.policy-content a {
+  color: var(--theme-color);
+}
+
+@media only screen and (max-width: 999px) {
+
+  .policy-card {
+
+    & .body {
+      padding: 30px 20px 20px;
+      font-size: 16px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .policy-card {
+
+    & .body {
+      padding: 50px 50px 20px;
+      font-size: 18px;
+    }
+  }
+
+  .policy-content h5, .policy-content p {
+    padding-bottom: 20px;
+  }
+}

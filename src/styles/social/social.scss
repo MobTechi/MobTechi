@@ -1,0 +1,22 @@
+$social-colors: (
+    "social": #898989,
+    "github": #171515,
+    "instagram": #C13584,
+    "youtube": #e52d27
+);
+
+:root {
+  @each $brand, $color in $social-colors {
+    --#{$brand}: #{$color};
+  }
+}
+
+@mixin define-social-color($name) {
+  .#{$name} {
+    --social: var(--#{$name});
+  }
+}
+
+@each $color, $_ in $social-colors {
+  @include define-social-color(#{$color});
+}

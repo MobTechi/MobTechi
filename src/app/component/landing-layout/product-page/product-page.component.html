@@ -1,0 +1,28 @@
+<div class="product-page-content">
+  <div class="intro">
+    <div class="left">
+      <oth-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [headerTemplate]="headerTemplate"
+        class="product-card">
+        <ng-template #headerTemplate>
+          <div class="header">
+            <h3>{{ product.name }}</h3>
+          </div>
+        </ng-template>
+        <ng-template #bodyTemplate>
+          <div class="body">
+            <img [src]="product.image" alt="product.url" class="app-icon" />
+            <p>{{ product.description }}</p>
+            <div class="button-wrapper">
+              <img width="100" height="100" src="../../../assets/icons/play-store.png" (click)="openPlayStore(product.url)"/>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template #bottomWrapperTemplate></ng-template>
+      </oth-card>
+    </div>
+  </div>
+
+  <!-- <div class="screenshots-wrapper" *ngIf="product.screenshots">
+    <app-screenshot-swiper [screenshots]="product.screenshots"></app-screenshot-swiper>
+  </div> -->
+</div>

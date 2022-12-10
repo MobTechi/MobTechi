@@ -1,0 +1,30 @@
+<!-- Contact Us Form Start -->
+<app-title title="Contact Us"></app-title>
+
+<div class="websites-wrapper">
+  <ng-container *ngFor="let website of websites">
+    <oth-brand-button (click)="redirect(website.url)" [icon]="website.cssClass" [text]="website.name">
+    </oth-brand-button>
+  </ng-container>
+</div>
+
+<div class="footer">
+  <div class="footer-card-wrapper">
+    <div class="footer-card-right-column">
+      <h4>For general queries, including partnership opportunities,
+        please email
+        <a [href]="'mailto: ' + environment.email" class="theme-color-link">
+          {{ environment.email }}
+        </a>
+      </h4>
+    </div>
+  </div>
+</div>
+<!-- Contact Us Form End -->
+
+<!-- Contact Information -->
+<!-- <app-title title="Contact Information">
+</app-title>
+<div class="contact-information-wrapper">
+  <app-contact-information-card></app-contact-information-card>
+</div> -->

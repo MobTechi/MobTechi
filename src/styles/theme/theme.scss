@@ -1,0 +1,6 @@
+@use 'color/color.theme';
+
+/* This is the class to change default theme */
+.default-theme {
+  @extend .blue-theme;
+}
