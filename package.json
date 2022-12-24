@@ -1,7 +1,7 @@
 {
   "name": "website",
   "description": "MobTechi is a modern, responsive, and customizable for your business. It contains reusable components, theme color, and design support along with dark theme support.",
-  "version": "1.2",
+  "version": "1.3",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

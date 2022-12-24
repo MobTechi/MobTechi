@@ -1,12 +1,14 @@
 $social-colors: (
-    "social": #898989,
-    "github": #171515,
-    "instagram": #C13584,
-    "youtube": #e52d27
+  "google-play": #ff3333,
+  "github": #171515,
+  "instagram": #C13584,
+  "telegram": #2AABEE
 );
 
 :root {
-  @each $brand, $color in $social-colors {
+
+  @each $brand,
+  $color in $social-colors {
     --#{$brand}: #{$color};
   }
 }
@@ -17,6 +19,7 @@ $social-colors: (
   }
 }
 
-@each $color, $_ in $social-colors {
+@each $color,
+$_ in $social-colors {
   @include define-social-color(#{$color});
 }
