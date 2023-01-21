@@ -16,7 +16,9 @@ The open source responsive website template
 # Commands
 * Serve: ng serve
 * Build: ng build
-* Producion: ng build --configuration prod
+* Serve Producion: ng serve --configuration prod
+* Build Producion: ng build --configuration prod
+* Aot Build Production: ng build --aot true --configuration prod
 
 ### For demo see our webiste by [Click Me](https://mobtechi.com)
 
