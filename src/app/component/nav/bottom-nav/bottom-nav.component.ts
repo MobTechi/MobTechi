@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { TOP_NAV_MENUS } from 'src/app/data/nav-menus.data';
+import { NAV_MENUS } from 'src/app/constants/helper-constants';
 
-import { URLS } from '../../../data/navigation.data';
+import { URLS } from '../../../constants/navigation-constants';
 
 @Component({
   selector: 'app-bottom-nav',
@@ -12,7 +12,7 @@ import { URLS } from '../../../data/navigation.data';
 })
 export class BottomNavComponent implements OnInit {
   public URLS = URLS;
-  public TOP_NAV_MENUS = TOP_NAV_MENUS;
+  public navMenus = NAV_MENUS;
   public routerUrl: string;
   public loading = false;
 
@@ -22,7 +22,7 @@ export class BottomNavComponent implements OnInit {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      this.routerUrl = event.url;
+      this.routerUrl = event.url === URLS.root ? URLS.home : event.url;
     });
   }
 

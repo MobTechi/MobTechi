@@ -1,6 +1,6 @@
 // Angular module
 import { LayoutModule } from '@angular/cdk/layout';
-import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,6 +13,11 @@ import { SwiperModule } from 'swiper/angular';
 import { ButtonModule } from '@open-template-hub/button';
 import { CardModule } from '@open-template-hub/card';
 import { HeroModule } from '@open-template-hub/hero';
+
+// firebase module
+import { firebaseConfig } from 'src/app/constants/firebase-constants';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 // App component module
 import { AppComponent } from './app.component';
@@ -62,7 +67,10 @@ import { TitleComponent } from './component/UI/title/title.component';
     ButtonModule,
     HeroModule,
     ToastrModule.forRoot({ preventDuplicates: true }),
-    MarkdownModule.forRoot({ loader: HttpClient })
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    // Initialize Firebase
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

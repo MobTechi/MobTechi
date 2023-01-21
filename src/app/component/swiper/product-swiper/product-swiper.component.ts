@@ -1,22 +1,23 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from 'src/app/model/product.model';
+import { URLS } from 'src/app/constants/navigation-constants';
+import { App } from 'src/app/model/app.model';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
 
-SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
-@Component( {
+@Component({
   selector: 'app-product-swiper',
   templateUrl: './product-swiper.component.html',
-  styleUrls: [ './product-swiper.component.scss' ],
+  styleUrls: ['./product-swiper.component.scss'],
   encapsulation: ViewEncapsulation.None
-} )
+})
 export class ProductSwiperComponent {
 
- @Input() products: Product[];
+  @Input() apps: App[];
 
- @Input() isNavigationEnabled = true;
- @Input() isPaginationEnabled = true;
+  @Input() isNavigationEnabled = true;
+  @Input() isPaginationEnabled = true;
 
   public height = 100;
   public breakpoints = {
@@ -34,9 +35,9 @@ export class ProductSwiperComponent {
     }
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   public openProduct(url) {
-    this.router.navigate(['/products/' + url])
+    this.router.navigate([URLS.apps + URLS.root + url])
   }
 }

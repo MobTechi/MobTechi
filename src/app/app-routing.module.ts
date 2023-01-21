@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NAVIGATIONS } from './data/navigation.data';
-import { NavigationInterceptor } from './interceptor/navigation/navigation.interceptor';
+import { NAVIGATIONS } from './constants/navigation-constants';
+import { NavigationInterceptor } from './service/navigation.interceptor';
 import { HomePageComponent } from './component/landing-layout/home-page/home-page.component';
 import { LandingLayoutComponent } from './component/landing-layout/landing-layout.component';
 import { PrivacyPolicyPageComponent } from './component/landing-layout/policy-pages/privacy-policy-page/privacy-policy-page.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
         canActivate: [NavigationInterceptor],
       },
       {
-        path: NAVIGATIONS.products.url,
+        path: NAVIGATIONS.apps.url,
         component: HomePageComponent,
         canActivate: [NavigationInterceptor],
       },
@@ -33,7 +33,7 @@ const routes: Routes = [
         canActivate: [NavigationInterceptor],
       },
       {
-        path: NAVIGATIONS.products.url + '/' + ':product',
+        path: NAVIGATIONS.apps.url + '/' + ':app',
         component: ProductPageComponent,
         canActivate: [NavigationInterceptor],
       },

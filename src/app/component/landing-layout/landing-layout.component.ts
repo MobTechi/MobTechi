@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { URLS } from 'src/app/data/navigation.data';
+import { URLS } from 'src/app/constants/navigation-constants';
 
 @Component( {
   selector: 'app-landing-layout',

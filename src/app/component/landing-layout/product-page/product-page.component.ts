@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCTS } from 'src/app/data/products.data';
-import { Product } from 'src/app/model/product.model';
+import { App } from 'src/app/model/app.model';
+import { FirebaseService } from 'src/app/service/firebase.service';
 import { redirectURL } from 'src/utils';
 
 @Component({
@@ -9,22 +9,25 @@ import { redirectURL } from 'src/utils';
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.scss'],
 })
-export class ProductPageComponent {
+export class ProductPageComponent implements OnInit {
 
-  public product: Product;
+  public product: App;
   public productLineKey: string;
 
   // Play store url properties
   private readonly PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mobtech.appName';
 
   constructor(
-    public router: Router
-  ) {
-    this.product = PRODUCTS.find((product) => this.router.url.includes(product.url));
+    public router: Router,
+    private firebaseService: FirebaseService
+  ) { }
+
+  async ngOnInit(): Promise<void> {
+    this.product = await this.firebaseService.getAppByUrl(this.router.url);
   }
 
-  public openPlayStore(appUrl: string) {
-    const appURL = this.PLAY_STORE_URL.replace('appName', appUrl);
+  public openPlayStore(app: App) {
+    const appURL = this.PLAY_STORE_URL.replace('appName', app.package);
     redirectURL(appURL, true);
   }
 }

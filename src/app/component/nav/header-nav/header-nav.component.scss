@@ -46,6 +46,10 @@
   @include util.flex-center-center;
 
   margin-right: auto;
+
+  .header-title {
+    margin-left: 5px;
+  }
 }
 
 .top-nav .right-item-wrapper {

@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, } from '@angular/router';
 import { Observable } from 'rxjs';
-import { NAVIGATIONS } from 'src/app/data/navigation.data';
+import { NAVIGATIONS } from 'src/app/constants/navigation-constants';
 import { SeoMetaData } from 'src/app/model/seo.model';
-import { SeoService } from 'src/app/service/seo/seo.service';
+import { SeoService } from 'src/app/service/seo.service';
 
 @Injectable({
   providedIn: 'root',

@@ -5,7 +5,8 @@
   </a>
   <div class="left-item-wrapper">
     <a *ngFor="let menu of TOP_NAV_MENUS" [routerLink]="menu.url" [class.active]="routerUrl.includes(menu.url)">
-      <span>{{ menu.title }}</span>
+      <i class="fas fa-fw" [class]="menu.i" aria-hidden="true"></i>
+      <span class="header-title">{{ menu.title }}</span>
     </a>
   </div>
 </nav>
