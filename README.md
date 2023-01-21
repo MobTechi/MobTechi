@@ -1,6 +1,5 @@
 # MobTechi Website
-### The open source responsive website template
- [![GitHub Release Date](https://img.shields.io/github/release-date/MobTechi/Website.svg?style=flat-square)](https://github.com/MobTechi/Website/releases)
+The open source responsive website template
  
 # Features
 * Light weight website
