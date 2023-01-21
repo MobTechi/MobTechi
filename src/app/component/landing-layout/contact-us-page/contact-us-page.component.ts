@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { redirectURL } from 'src/utils';
-import { URLS } from '../../../data/navigation.data';
+import { URLS } from '../../../constants/navigation-constants';
 
 @Component({
   selector: 'app-contact-us',

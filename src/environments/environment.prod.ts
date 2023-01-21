@@ -9,9 +9,9 @@ export const environment = {
       url: 'https://play.google.com/store/apps/dev?id=7579037844327234040',
     },
     {
-      name: 'GitHub',
-      cssClass: 'github',
-      url: 'https://github.com/MobTechi',
+      name: 'Mail',
+      cssClass: 'at',
+      url: 'mailto:support@mobtechi.com',
     },
     {
       name: 'Instagram',

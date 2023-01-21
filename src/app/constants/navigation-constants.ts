@@ -1,4 +1,4 @@
-import { BRAND } from './brand.data';
+import { BRAND } from "./helper-constants";
 
 export const NAVIGATIONS = {
 
@@ -15,11 +15,11 @@ export const NAVIGATIONS = {
     description: BRAND.name + 'provide open source apps, games and responsive websites',
     keywords: [BRAND.name, 'open source app', 'open source game', 'open source website'],
   },
-  products: {
-    url: 'products',
-    title: 'Products - ' + BRAND.name,
-    description: BRAND.name + 'Products',
-    keywords: [BRAND.name, BRAND.name + 'Products', 'open source app', 'open source game', 'open source website'],
+  apps: {
+    url: 'apps',
+    title: 'Apps - ' + BRAND.name,
+    description: BRAND.name + 'Apps',
+    keywords: [BRAND.name, BRAND.name + 'Apps', 'open source app', 'open source game', 'open source website'],
   },
   contactUs: {
     url: 'contact-us',
@@ -39,7 +39,7 @@ export const URLS = {
   // Landing layout
   root: '/',
   home: '/' + NAVIGATIONS.home.url,
-  products: '/' + NAVIGATIONS.products.url,
+  apps: '/' + NAVIGATIONS.apps.url,
   contact: '/' + NAVIGATIONS.contactUs.url,
   privacyPolicy: '/' + NAVIGATIONS.privacyPolicy.url,
 };

@@ -8,14 +8,14 @@
   </p>
 </div>
 
-<!-- Products -->
-<div id="products" class="products-wrapper">
-  <h1>Our Products</h1>
-  <app-product-swiper [products]="PRODUCTS">
+<!-- Apps -->
+<div id="apps" *ngIf="apps && apps.length" class="products-wrapper">
+  <h1>Our Apps</h1>
+  <app-product-swiper [apps]="apps">
   </app-product-swiper>
 </div>
 
 <!-- Contact Us -->
-<div id="contact-us" class="contact-us-wrapper">
+<div id="contact" class="contact-us-wrapper">
   <app-contact-us></app-contact-us>
 </div>
