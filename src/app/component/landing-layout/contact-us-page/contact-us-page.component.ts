@@ -11,7 +11,7 @@ import { URLS } from '../../../constants/navigation-constants';
 export class ContactUsPageComponent {
   public URLS = URLS;
   public environment = environment;
-  public websites = environment.social;
+  public contactUs = environment.contactUs;
 
   public redirect(href: string) {
     redirectURL(href, true)

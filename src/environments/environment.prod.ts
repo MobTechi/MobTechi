@@ -2,7 +2,7 @@ export const environment = {
   production: true,
   website: 'https://mobtechi.com',
   email: 'support@mobtechi.com',
-  social: [
+  contactUs: [
     {
       name: 'Play Store',
       cssClass: 'google-play',
@@ -17,11 +17,6 @@ export const environment = {
       name: 'Instagram',
       cssClass: 'instagram',
       url: 'https://www.instagram.com/mobtechi',
-    },
-    {
-      name: 'Telegram',
-      cssClass: 'telegram',
-      url: 'https://telegram.me/mobtechi',
     }
   ]
 };
