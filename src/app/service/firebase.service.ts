@@ -38,8 +38,10 @@ export class FirebaseService {
     private normalize(appData = {}) {
         const appList = [];
         Object.keys(appData).forEach((key) => {
-            const app = appData[key];
-            appList.push(app);
+            const app: App = appData[key];
+            if (app.active) {
+                appList.push(app);
+            }
         });
         return sortByNumber(appList, 'sequence', SORTING_TYPES.ascending);
     }

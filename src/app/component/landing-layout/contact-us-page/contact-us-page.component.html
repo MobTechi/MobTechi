@@ -2,8 +2,8 @@
 <app-title title="Contact Us"></app-title>
 
 <div class="websites-wrapper">
-  <ng-container *ngFor="let website of websites">
-    <oth-brand-button (click)="redirect(website.url)" [icon]="website.cssClass" [text]="website.name">
+  <ng-container *ngFor="let contact of contactUs">
+    <oth-brand-button (click)="redirect(contact.url)" [icon]="contact.cssClass" [text]="contact.name">
     </oth-brand-button>
   </ng-container>
 </div>
