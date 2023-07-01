@@ -1,4 +1,5 @@
 export interface App {
+  id: string;
   active: boolean;
   title: string,
   package: string,

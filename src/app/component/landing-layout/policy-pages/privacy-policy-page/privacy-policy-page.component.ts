@@ -27,6 +27,7 @@ export class PrivacyPolicyPageComponent implements OnInit {
     this.product = await this.firebaseService.getAppByUrl(this.router.url);
     if (!this.product) {
       this.product = {
+        id: 'mobtechi',
         active: true,
         title: 'MobTechi',
         package: null,

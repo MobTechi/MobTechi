@@ -8,6 +8,6 @@
     [slidesPerView]="1"
     [spaceBetween]="10">
   <ng-template *ngFor="let app of apps" swiperSlide>
-    <img [height]="height" [src]="app.image" alt="logo" class="brand-logo" width="auto" (click)="openProduct(app.package)" />
+    <img [height]="height" [src]="app.image" alt="logo" class="brand-logo" width="auto" (click)="openProduct(app.id)" />
   </ng-template>
 </swiper>

@@ -32,7 +32,7 @@ export class FirebaseService {
 
     public async getAppByUrl(routerUrl) {
         const appsList = await this.getApps();
-        return appsList.find((app) => routerUrl.includes(app.package));
+        return appsList.find((app) => routerUrl.includes(app.id));
     }
 
     private normalize(appData = {}) {

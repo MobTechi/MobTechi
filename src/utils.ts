@@ -5,6 +5,17 @@ export const SORTING_TYPES = {
 }
 
 // util fuctions
+
+/**
+ * @function getAppPlayStoreLink
+ * This Method is used to get the app play store link
+ */
+export function getAppPlayStoreLink(appPackageName) {
+  // Play store url
+  const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=';
+  return `${PLAY_STORE_URL}${appPackageName}`;
+}
+
 /**
  * @function redirectURL
  * This Method is used to redirect the given URL
