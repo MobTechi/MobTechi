@@ -102,6 +102,10 @@ a.theme-color-link {
   font-weight: normal;
 }
 
+.font-color {
+  color: var(--theme-color);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     &::-webkit-scrollbar-track:vertical {

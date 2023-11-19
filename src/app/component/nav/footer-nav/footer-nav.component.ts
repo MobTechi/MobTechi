@@ -10,8 +10,7 @@ import { FirebaseService } from 'src/app/service/firebase.service';
 })
 export class FooterNavComponent implements OnInit {
 
-  private appsPackage = [];
-  @Input() hideShadow = false;
+  private appsPackage: string[] = [];
 
   constructor(
     private router: Router,
@@ -26,7 +25,7 @@ export class FooterNavComponent implements OnInit {
   public routePrivacyPolicy() {
     const currentURL = this.router.url;
     const appPackage = currentURL.replace('/apps/', '');
-    if (appPackage && this.appsPackage.includes(appPackage)) {
+    if (appPackage && this.appsPackage.find((app) => app.includes(appPackage))) {
       this.router.navigate([appPackage + URLS.privacyPolicy])
     } else {
       this.router.navigate([URLS.privacyPolicy])
