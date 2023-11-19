@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, } from '@angular/router';
+import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { NAVIGATIONS } from 'src/app/constants/navigation-constants';
 import { SeoMetaData } from 'src/app/model/seo.model';
@@ -8,7 +8,7 @@ import { SeoService } from 'src/app/service/seo.service';
 @Injectable({
   providedIn: 'root',
 })
-export class NavigationInterceptor implements CanActivate {
+export class NavigationInterceptor  {
   constructor(private seoService: SeoService) {
   }
 
