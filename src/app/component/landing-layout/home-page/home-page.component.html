@@ -9,10 +9,9 @@
 </div>
 
 <!-- Apps -->
-<div id="apps" *ngIf="apps && apps.length" class="products-wrapper">
+<div id="apps" class="products-wrapper">
   <h1>Our Apps</h1>
-  <app-product-swiper [apps]="apps">
-  </app-product-swiper>
+  <app-product-swiper *ngIf="apps && apps.length" [apps]="apps"></app-product-swiper>
 </div>
 
 <!-- Contact Us -->

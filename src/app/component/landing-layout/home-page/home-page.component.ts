@@ -18,6 +18,7 @@ enum elementId {
 })
 
 export class HomePageComponent {
+
   public URLS = URLS;
   public apps: App[] = [];
 
@@ -25,12 +26,12 @@ export class HomePageComponent {
     public router: Router,
     public firebaseService: FirebaseService
   ) {
+    // fetch apps from firebase db
+    this.fetchApps();
     // check the current route to call the scrollIntoView
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    ).subscribe(async (event: NavigationEnd) => {
-      // fetch apps from firebase db
-      this.apps = await this.firebaseService.getApps();
+    ).subscribe((event: NavigationEnd) => {
       const routerUrl = event.url;
       if (routerUrl === URLS.home) {
         this.scrollIntoView(elementId.home);
@@ -40,6 +41,10 @@ export class HomePageComponent {
         this.scrollIntoView(elementId.contact);
       }
     });
+  }
+
+  private async fetchApps() {
+    this.apps = await this.firebaseService.getApps();
   }
 
   public async scrollIntoView(id) {

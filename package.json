@@ -1,7 +1,7 @@
 {
-  "name": "website",
+  "name": "mobtechi",
   "description": "MobTechi is a modern, responsive, and customizable. It contains reusable components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,8 +9,7 @@
     "watch": "ng build --watch",
     "test": "ng test",
     "startProd": "ng serve --configuration prod",
-    "buildProd": "ng build --configuration prod",
-    "aotBuildProd": "ng build --aot true --configuration prod"
+    "buildProd": "ng build --aot true --configuration prod"
   },
   "dependencies": {
     "@angular/animations": "^16.2.12",
