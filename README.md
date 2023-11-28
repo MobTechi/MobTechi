@@ -22,4 +22,4 @@ The open source responsive website template
 
 ### For demo see our webiste by [Click Me](https://mobtechi.com)
 
-### For Support mail to support@mobtechi.com
+### For Support mail to mobtechi.team@gmail.com

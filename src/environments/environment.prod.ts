@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   website: 'https://mobtechi.com',
-  email: 'support@mobtechi.com',
+  email: 'mobtechi.team@gmail.com',
   contactUs: [
     {
       name: 'Play Store',
@@ -11,7 +11,7 @@ export const environment = {
     {
       name: 'Mail',
       cssClass: 'at',
-      url: 'mailto:support@mobtechi.com',
+      url: 'mailto:mobtechi.team@gmail.com',
     },
     {
       name: 'Instagram',
