@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BRAND } from 'src/app/constants/helper-constants';
 import { App } from 'src/app/model/app.model';
 import { FirebaseService } from 'src/app/service/firebase.service';
-import { getAppPlayStoreLink, redirectURL } from 'src/utils';
 
 @Component({
   selector: 'app-product-page',
@@ -13,6 +13,7 @@ export class ProductPageComponent implements OnInit {
 
   public product: App;
   public productLineKey: string;
+  public BRAND = BRAND;
 
   constructor(
     public router: Router,
@@ -21,10 +22,5 @@ export class ProductPageComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.product = await this.firebaseService.getAppByUrl(this.router.url);
-  }
-
-  public openPlayStore(app: App) {
-    const appURL = getAppPlayStoreLink(app.package);
-    redirectURL(appURL, true);
   }
 }

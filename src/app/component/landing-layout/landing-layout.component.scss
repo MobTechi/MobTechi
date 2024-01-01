@@ -31,11 +31,6 @@
 
 @media only screen and (max-width: 999px) {
 
-  .header,
-  .header-filler {
-    display: none;
-  }
-
   .raw-content-page-layout {
     padding: 3vh 3vw;
     min-height: 80vh;
@@ -48,11 +43,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-
-  .header,
-  .header-filler {
-    display: block;
-  }
 
   .raw-content-page-layout {
     padding: 90px;

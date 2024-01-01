@@ -1,7 +1,10 @@
 <nav class="top-nav" #dropdownMenuParent>
   <a [routerLink]="URLS.home" class="brand">
     <img [src]="BRAND.logo" alt="logo" class="brand-logo" height="40" width="40" />
-    <h2>{{ BRAND.name }}</h2>
+    <div class="brand-name">
+      <h2>{{ BRAND.name }}</h2>
+      <p class="version">v{{ config.version }}</p>
+    </div>
   </a>
   <div class="left-item-wrapper">
     <a *ngFor="let menu of TOP_NAV_MENUS" [routerLink]="menu.url" [class.active]="routerUrl.includes(menu.url)">
