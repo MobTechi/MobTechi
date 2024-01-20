@@ -1,19 +1,19 @@
 {
   "name": "mobtechi",
   "description": "MobTechi is a modern, responsive, and customizable. It contains reusable components",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "node exportPackage.js && ng build",
     "watch": "ng build --watch",
-    "test": "ng test",
-    "startProd": "ng serve --configuration prod",
-    "buildProd": "ng build --aot true --configuration prod"
+    "test": "node exportPackage.js && ng test",
+    "startProd": "node exportPackage.js && ng serve --configuration prod",
+    "buildProd": "node exportPackage.js && ng build --aot true --configuration prod"
   },
   "dependencies": {
     "@angular/animations": "^16.2.12",
-    "@angular/cdk": "^14.0.1",
+    "@angular/cdk": "^16.2.7",
     "@angular/common": "^16.2.12",
     "@angular/compiler": "^16.2.12",
     "@angular/core": "^16.2.12",
@@ -26,7 +26,7 @@
     "@open-template-hub/button": "^4.0.5",
     "@open-template-hub/card": "^4.0.4",
     "@open-template-hub/hero": "^4.0.3",
-    "ngx-markdown": "^14.0.0",
+    "ngx-markdown": "^16.0.0",
     "ngx-toastr": "^15.0.0",
     "rxjs": "^7.5.5",
     "swiper": "^8.2.3",

@@ -4,6 +4,7 @@ import { filter } from 'rxjs';
 import { App } from 'src/app/model/app.model';
 import { FirebaseService } from 'src/app/service/firebase.service';
 import { URLS } from '../../../constants/navigation-constants';
+import { BRAND } from 'src/app/constants/helper-constants';
 
 enum elementId {
   home = 'home',
@@ -20,6 +21,7 @@ enum elementId {
 export class HomePageComponent {
 
   public URLS = URLS;
+  public BRAND = BRAND;
   public apps: App[] = [];
 
   constructor(

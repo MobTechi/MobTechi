@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { redirectURL } from 'src/utils';
 import { URLS } from '../../../constants/navigation-constants';
+import { CONFIG } from 'src/config';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,8 +10,7 @@ import { URLS } from '../../../constants/navigation-constants';
 })
 export class ContactUsPageComponent {
   public URLS = URLS;
-  public environment = environment;
-  public contactUs = environment.contactUs;
+  public contactUs = CONFIG.contactUs;
 
   public redirect(href: string) {
     redirectURL(href, true)

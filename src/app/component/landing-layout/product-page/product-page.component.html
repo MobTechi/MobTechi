@@ -12,9 +12,13 @@
           <div class="body">
             <img [src]="product.image" alt="product.url" class="app-icon" />
             <p>{{ product.description }}</p>
-            <div class="button-wrapper">
-              <img width="100" height="100" src="../../../assets/icons/play-store.png"
-                (click)="openPlayStore(product)" />
+            <div class="google-play-badge">
+              <a href='https://play.google.com/store/apps/details?id={{product.package}}&pcampaignid=web_share&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
+              </a>
+              <a href="https://github.com/{{BRAND.name}}/{{product.id}}" target="_blank">
+                <oth-brand-button [icon]="'github'" [text]="'GitHub'"></oth-brand-button>
+              </a>
             </div>
           </div>
         </ng-template>
