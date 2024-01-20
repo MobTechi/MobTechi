@@ -30,6 +30,15 @@
 
 .brand {
   margin-right: 10px;
+
+  .brand-name {
+    display: grid;
+
+    .version {
+      font-size: 10px;
+      color: var(--gray);
+    }
+  }
 }
 
 .top-nav .right-item-wrapper .contact {
@@ -60,7 +69,11 @@
 
 @media only screen and (max-width: 999px) {
   .top-nav {
-    display: none;
+    padding: 10px;
+    
+    .left-item-wrapper {
+      display: none;
+    }
   }
 }
 

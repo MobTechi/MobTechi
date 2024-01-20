@@ -56,18 +56,10 @@
         font-size: 20px;
       }
 
-      & .button-wrapper {
-        @include util.flex-layout-column;
-        @include util.flex-center-center;
-
-        box-sizing: border-box;
-
+      & .google-play-badge img {
         width: 100%;
-
-        &>* {
-          width: 100%;
-          margin: 5px 0;
-        }
+        height: 100%;
+        object-fit: contain;
       }
     }
   }
