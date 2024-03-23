@@ -35,6 +35,7 @@ import { LandingLayoutComponent } from './component/landing-layout/landing-layou
 import { PrivacyPolicyPageComponent } from './component/landing-layout/policy-pages/privacy-policy-page/privacy-policy-page.component';
 import { ProductPageComponent } from './component/landing-layout/product-page/product-page.component';
 import { TitleComponent } from './component/UI/title/title.component';
+import { ServicesComponent } from './component/services/services.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { TitleComponent } from './component/UI/title/title.component';
     ProductSwiperComponent,
     ScreenshotSwiperComponent,
     TitleComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,

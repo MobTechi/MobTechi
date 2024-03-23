@@ -14,11 +14,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: NAVIGATIONS.home.url,
-        pathMatch: 'full'
+        component: HomePageComponent,
+        canActivate: [NavigationInterceptor],
       },
       {
-        path: NAVIGATIONS.home.url,
+        path: NAVIGATIONS.services.url,
         component: HomePageComponent,
         canActivate: [NavigationInterceptor],
       },
@@ -50,7 +50,7 @@ const routes: Routes = [
     ]
   },
   // otherwise, redirect to error
-  { path: '**', redirectTo: NAVIGATIONS.home.url }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

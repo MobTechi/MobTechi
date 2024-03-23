@@ -9,9 +9,9 @@ export const NAVIGATIONS = {
     description: BRAND.name + 'provide open source apps, games and responsive websites',
     keywords: [BRAND.name, 'open source app', 'open source game', 'open source website'],
   },
-  home: {
-    url: 'home',
-    title: BRAND.name,
+  services: {
+    url: 'services',
+    title: 'Services - ' + BRAND.name,
     description: BRAND.name + 'provide open source apps, games and responsive websites',
     keywords: [BRAND.name, 'open source app', 'open source game', 'open source website'],
   },
@@ -38,8 +38,8 @@ export const NAVIGATIONS = {
 export const URLS = {
   // Landing layout
   root: '/',
-  home: '/' + NAVIGATIONS.home.url,
   apps: '/' + NAVIGATIONS.apps.url,
+  services: '/' + NAVIGATIONS.services.url,
   contact: '/' + NAVIGATIONS.contactUs.url,
   privacyPolicy: '/' + NAVIGATIONS.privacyPolicy.url,
 };

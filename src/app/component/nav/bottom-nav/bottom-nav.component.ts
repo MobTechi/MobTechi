@@ -22,7 +22,7 @@ export class BottomNavComponent implements OnInit {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      this.routerUrl = event.url === URLS.root ? URLS.home : event.url;
+      this.routerUrl = event.url;
     });
   }
 

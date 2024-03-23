@@ -52,7 +52,7 @@ app-product-swiper {
 
     & .swiper-button-prev {
       left: -40px;
-      color: var(--contrast);
+      color: var(--gray);
       @include swiper-button;
     }
 

@@ -5,9 +5,15 @@
   </p>
 </div>
 
+<!-- Services -->
+<div id="services" class="services-wrapper">
+  <app-title title="Services"></app-title>
+  <app-services></app-services>
+</div>
+
 <!-- Apps -->
 <div id="apps" class="products-wrapper">
-  <h1>Our Apps</h1>
+  <app-title title="Our Apps"></app-title>
   <app-product-swiper *ngIf="apps && apps.length" [apps]="apps"></app-product-swiper>
 </div>
 
