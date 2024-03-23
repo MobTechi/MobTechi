@@ -1,5 +1,5 @@
 export interface Image {
-  src: string;
-  description: string;
+  title: string;
+  image: string;
 }
 

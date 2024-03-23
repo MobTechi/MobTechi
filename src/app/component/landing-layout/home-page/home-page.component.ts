@@ -8,6 +8,7 @@ import { BRAND } from 'src/app/constants/helper-constants';
 
 enum elementId {
   home = 'home',
+  services = 'services',
   apps = 'apps',
   contact = 'contact'
 }
@@ -35,12 +36,14 @@ export class HomePageComponent {
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
       const routerUrl = event.url;
-      if (routerUrl === URLS.home) {
-        this.scrollIntoView(elementId.home);
+      if (routerUrl === URLS.services) {
+        this.scrollIntoView(elementId.services);
       } else if (routerUrl === URLS.apps) {
         this.scrollIntoView(elementId.apps);
       } else if (routerUrl === URLS.contact) {
         this.scrollIntoView(elementId.contact);
+      } else {
+        this.scrollIntoView(elementId.home);
       }
     });
   }

@@ -15,18 +15,18 @@ export const CONTACT_INFO = {
 
 export const NAV_MENUS = [
   {
-    title: 'Home',
-    url: '/home',
-    i: 'fa-home'
+    title: 'Services',
+    url: '/services',
+    i: 'fa-user-gear'
   },
   {
     title: 'Apps',
     url: '/apps',
-    i: 'fa-puzzle-piece'
+    i: 'fa-shapes'
   },
   {
     title: 'Contact Us',
     url: '/contact-us',
-    i: 'fa-handshake'
+    i: 'fa-comment'
   }
 ]

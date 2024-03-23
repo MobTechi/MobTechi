@@ -9,9 +9,8 @@
     [spaceBetween]="10">
   <ng-template *ngFor="let screenshot of screenshots" swiperSlide>
     <div class="content" (click)="openScreenshot(screenshot.src)">
-      <img height="auto" [src]="screenshot.src" alt="logo" class="brand-logo"
-           width="auto"/>
-      <p>{{ screenshot.description }}</p>
+      <img [src]="screenshot.image" [alt]="screenshot.title" class="brand-logo" />
+      <p>{{ screenshot.title }}</p>
     </div>
   </ng-template>
 </swiper>

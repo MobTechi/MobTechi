@@ -45,8 +45,10 @@ app-screenshot-swiper {
 
       & img {
         display: block;
-        object-fit: cover;
-        max-height: 300px;
+        object-fit: fill;
+        border-radius: 16px;
+        height: 35vh;
+        max-width: 20vw;
 
         &.grayscale {
           filter: contrast(0);
@@ -55,7 +57,6 @@ app-screenshot-swiper {
     }
 
     @mixin swiper-button {
-      color: var(--contrast);
       &:after {
         font-size: 30px;
       }
@@ -63,16 +64,18 @@ app-screenshot-swiper {
 
     & .swiper-button-prev {
       left: -40px;
+      color: var(--gray);
       @include swiper-button;
     }
 
     & .swiper-button-next {
       right: -40px;
+      color: var(--theme-color-blue);
       @include swiper-button;
     }
 
     & .swiper-pagination-bullet-active {
-      background: var(--theme-color-lighter-2);
+      background: var(--theme-color-blue);
     }
 
     & .swiper-pagination {
@@ -87,7 +90,7 @@ app-screenshot-swiper {
 
     & .content {
       & img {
-        max-width: 70vw;
+        max-width: 70vw !important;
       }
     }
   }
@@ -98,10 +101,10 @@ app-screenshot-swiper {
     width: 100%;
 
     & .content {
-      height: 330px;
+      height: 330px !important;
 
       & img {
-        max-width: 25vw;
+        // max-width: 25vw !important;
       }
     }
   }
