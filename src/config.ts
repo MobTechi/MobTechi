@@ -1,7 +1,8 @@
 export const CONFIG = {
-  version: "1.0.9",
+  version: "1.1.0",
   website: "https://mobtechi.com",
   email: "mobtechi.team@gmail.com",
+  firebaseStorageURL: "https://firebasestorage.googleapis.com/v0/b/mobtechi.appspot.com/o/",
   contactUs: [
     {
       name: "Play Store",

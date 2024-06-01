@@ -1,18 +1,23 @@
 <!-- Contact Us Form Start -->
-<app-title title="Contact Us"></app-title>
+<div style="position: relative;">
+  <div class="top-svg svg-div">
+    <img firebaseImgLoader="assets/icons/wave.svg">
+  </div>
+  <app-title title="Contact Us"></app-title>
 
-<div class="websites-wrapper">
-  <ng-container *ngFor="let contact of contactUs">
-    <oth-brand-button (click)="redirect(contact.url)" [icon]="contact.cssClass" [text]="contact.name">
-    </oth-brand-button>
-  </ng-container>
-</div>
-
-<div class="footer">
-  <div class="footer-card-wrapper">
-    <div class="footer-card-right-column">
-      <h4>Please email us with any general questions, including cooperation opportunities.
-      </h4>
+  <div class="websites-wrapper">
+    <ng-container *ngFor="let contact of contactUs">
+      <oth-brand-button class="oth-brand-button" (click)="redirect(contact.url)" [icon]="contact.cssClass" [text]="contact.name">
+      </oth-brand-button>
+    </ng-container>
+  </div>
+  
+  <div class="footer">
+    <div class="footer-card-wrapper">
+      <div class="footer-card-right-column">
+        <h4>Please email us with any general questions, including cooperation opportunities.
+        </h4>
+      </div>
     </div>
   </div>
 </div>
