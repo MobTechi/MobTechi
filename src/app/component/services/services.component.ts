@@ -16,23 +16,23 @@ export class ServicesComponent {
     this.servicesList = [
       {
         title: 'Web Application',
-        image: '/assets/icons/services/web-application.avif'
+        image: 'assets/icons/web-application.avif'
       },
       {
         title: 'Mobile Application',
-        image: '/assets/icons/services/mobile-application.avif'
+        image: 'assets/icons/mobile-application.avif'
       },
       {
         title: 'Data Storage and management',
-        image: '/assets/icons/services/data-storage-management.avif'
+        image: 'assets/icons/data-storage-management.avif'
       },
       {
         title: 'Cloud Services',
-        image: '/assets/icons/services/cloud-services.avif'
+        image: 'assets/icons/cloud-services.avif'
       },
       {
         title: 'IT Consulting',
-        image: '/assets/icons/services/it-consulting.jpeg'
+        image: 'assets/icons/it-consulting.jpeg'
       }
     ];
   }

@@ -36,6 +36,7 @@ import { PrivacyPolicyPageComponent } from './component/landing-layout/policy-pa
 import { ProductPageComponent } from './component/landing-layout/product-page/product-page.component';
 import { TitleComponent } from './component/UI/title/title.component';
 import { ServicesComponent } from './component/services/services.component';
+import { FirebaseImgLoaderDirective } from './directive/firebase-img-loader.directive';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { ServicesComponent } from './component/services/services.component';
     ScreenshotSwiperComponent,
     TitleComponent,
     ServicesComponent,
+    FirebaseImgLoaderDirective,
   ],
   imports: [
     BrowserModule,

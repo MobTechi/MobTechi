@@ -51,6 +51,33 @@
   /* [DARK MODE END] */
 }
 
+:root, :root .light-theme {
+  /* color scale */
+  --lighter: var(--lighter-light-mode);
+  --color: var(--color-light-mode);
+  --darker: var(--darker-light-mode);
+
+  /* contra color scale */
+  --darker-contrast: var(--darker-contrast-light-mode);
+  --contrast: var(--contrast-light-mode);
+  --lighter-contrast: var(--lighter-contrast-light-mode);
+
+  /* background */
+  --background-color: var(--background-color-light-mode);
+  --background-color-alpha: var(--background-color-alpha-light-mode);
+  --card: var(--card-light-mode);
+
+  --shadow: var(--shadow-light-mode);
+  --shadow-lighter: var(--shadow-lighter-light-mode);
+  --shadow-darker: var(--shadow-darker-light-mode);
+
+  --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
+  --cropper-outline-color: var(--cropper-outline-color-light-mode);
+
+  --always-contrast-light-mode: var(--contrast-light-mode);
+  --always-card-dark-mode: var(--card-dark-mode);
+}
+
 @mixin theme-general-dark-mode {
   /* color scale */
   --lighter: var(--lighter-dark-mode);
@@ -75,12 +102,12 @@
   --cropper-outline-color: var(--cropper-outline-color-dark-mode);
 }
 
-.dark-theme {
-  @include theme-general-dark-mode;
-}
+// .dark-theme {
+//   @include theme-general-dark-mode;
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @include theme-general-dark-mode;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     @include theme-general-dark-mode;
+//   }
+// }

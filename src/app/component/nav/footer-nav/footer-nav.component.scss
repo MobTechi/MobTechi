@@ -3,11 +3,13 @@
 .footer {
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 0 30px var(--shadow);
+  box-shadow: 5px 0 30px var(--background-color);
   background-color: var(--background-color);
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  z-index: 111;
+  position: relative;
 }
 
 .footer-links-wrapper {

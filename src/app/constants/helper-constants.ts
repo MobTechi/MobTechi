@@ -1,7 +1,9 @@
+import { CONFIG } from "src/config";
+
 export const BRAND = {
   name: 'MobTechi',
   createdDate: '2022-12-04',
-  logo: '../../../../../assets/logo.png',
+  logo: `${CONFIG.firebaseStorageURL}assets%2Flogo.jpg?alt=media`,
   description: `Your Trusted Digital Partner. We're experts in making great websites, cool mobile apps, and strong tech stuff for new businesses. We simplify complex things, make affordable solutions, and turn your ideas into reality. We're not just tech folks; we're here to help and give smart advice all along. Mixing smart ideas with practical work, we boost your online presence from start to finish. Choose MobTechi for a smart and skilled team that helps your startup shine online.`
 };
 
